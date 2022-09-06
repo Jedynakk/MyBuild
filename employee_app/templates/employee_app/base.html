@@ -1,0 +1,17 @@
+{% load static %}
+{% include 'employee_app/employee_header.html' %}
+<body>
+<link rel="stylesheet" type="text/css" href="{% static '/employee_app/updaty.css' %}">
+<div class="ak">AKUTALNOŚCI</div>
+<div class="updates">
+    {% for u in update %}
+        <div class="tekst"><p>{{ u.text }}</p></div>
+        <div class="autor"><p>{{ u.user }}</p></div>
+        <div class="data">{{ u.data }}</div>
+    {% endfor %}
+</div>
+<form action="{% url 'add_update' %}" method="post">
+    {% csrf_token %}
+    <input class="dodawnanie" type="text" name="text" placeholder="Napisz post">
+    <input class="add_button" type="submit" value="DODAJ"></form>
+</body>

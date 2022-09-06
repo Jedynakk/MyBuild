@@ -1,0 +1,28 @@
+{% include 'admin_app/mains/admin_header.html' %}
+{% block content %}
+    {% load static %}
+    <link rel="stylesheet" type="text/css" href="{% static '/admin_app/lista_budow.css' %}">
+
+
+
+    <div class="head"><h1> Lista Przetargów</h1> </div>
+
+
+    <a href={% url 'add_przetarg' %}><button class="add_budowa">DODAJ PRZETARG</button></a>
+    <a href={% url 'add_tag' %}><button class="add_budowa">DODAJ TAG</button></a>
+
+
+    <table class="table">
+        {% for przetarg in przetarg_lista %}
+            <tr class="trr">
+                <td class="title">{{ przetarg.miasto }} {{ przetarg.ulica }} {{ przetarg.data }}</td>
+
+                <td><a class="link" href="{% url 'main_przetarg' przetarg.id %}">ZOBACZ SŻCZEGÓŁY</a></td>
+                <td><a class="link" href="{% url 'del_przetarg' przetarg.id %}">USUŃ</a></td>
+                <td><a class="link" href="{% url 'update_przetarg' przetarg.id %}">EDYTUJ</a></td>
+
+            </tr>
+        {% endfor %}
+    </table>
+
+{% endblock %}

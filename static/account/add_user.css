@@ -1,0 +1,93 @@
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300&display=swap');
+.body{
+    background-color: #251F15;
+    overflow: hidden;
+}
+.rama {
+    height: 100%;
+    width: 1200px;
+    border: none;
+    background-color: #FFE7C6;
+    position: relative; right:-730px;top: -100px;
+    overflow: hidden;
+    box-shadow: 0 0 15px 4px rgba(0, 0, 0, 0.1);
+}
+
+.log{
+    height: 650px;
+    width: 650px;
+    border: none;
+    background-color: #fcfcfc;
+    position: relative; top: 150px; left: 290px;
+    overflow: hidden;
+    box-shadow: 0 0 15px 4px rgba(0, 0, 0, 0.1);
+
+}
+
+.add_budowa_form {
+    font-family: "Quicksand", sans-serif;
+    text-align: right;
+    position: relative;
+    right: 90px;
+    top: 200px;
+    text-decoration: none;
+}
+
+
+.fieldsy {
+    border-radius: 10px;
+    border-top:none;
+    border-left:none;
+    border-right:none;
+    height: 33px;
+    width: 300px;
+    position: center;
+    background-color: white; opacity: 0.4;
+    border-bottom: 1px solid black;
+}
+
+.button_add_bud{
+    position: relative; top: 260px; left:250px;
+    width: 200px;
+    height: 30px;
+    padding: 9px 25px;
+    background-color:#5E4721 ;
+    border: none;
+    border-radius: 15px;
+    cursor: pointer;}
+
+.button_add_bud_tekst{
+    font-family: "Quicksand", sans-serif ;
+    font-size: 14px;
+    color: #FFE9C4;
+    text-decoration: none;
+    text-align: center;
+    position: relative; top:-5px;
+    border: none;
+    background: none;
+}
+
+.headers{
+    font-family: "Quicksand", sans-serif ;
+    font-size: 20px;
+    position: relative; left: 1170px; top: 250px;
+    z-index: 900;
+}
+
+.kreska{
+    height: 1px;
+    width: 300px;
+    border: none;
+    background-color: #251F15;
+    z-index: 900;
+    position: relative; top: 280px; left: 205px
+
+}
+
+.b{
+    font-family: "Quicksand", sans-serif ;
+    font-size: 13px;
+    text-decoration: none;
+    z-index: 900;
+    position: relative;top: 270px; left: 260px
+}

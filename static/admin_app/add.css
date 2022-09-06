@@ -1,0 +1,65 @@
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300&display=swap');
+
+.rama {
+    height: 700px;
+    border-radius: 30px;
+    width: 600px;
+    border: none;
+    background-color: #FFE7C6;
+    position: relative;
+    top: 50px;
+    left: 665px;
+    box-shadow: 0 0 15px 4px rgba(0, 0, 0, 0.1);
+    overflow: scroll;
+}
+
+.add_budowa_form {
+    font-family: "Quicksand", sans-serif;
+    text-align: right;
+    position: relative;
+    right: 90px;
+    top: 100px;
+}
+
+
+.fieldsy {
+    border-radius: 10px;
+    border-top:none;
+    border-left:none;
+    border-right:none;
+    height: 33px;
+    width: 300px;
+    position: center;
+    border-bottom: 10px;
+    background-color: white; opacity: 0.4;
+    color: black;
+}
+
+.button_add_bud{
+    position: relative; top: 100px; left:200px;
+    width: 200px;
+    height: 30px;
+    padding: 9px 25px;
+    background-color:#5E4721 ;
+    border: none;
+    border-radius: 15px;
+    cursor: pointer;}
+
+.button_add_bud_tekst{
+    font-family: "Quicksand", sans-serif ;
+    font-size: 14px;
+    color: #FFE9C4;
+    text-decoration: none;
+    text-align: center;
+    position: relative; top:-5px;
+    border: none;
+    background: none;
+}
+
+.headers{
+    font-family: "Quicksand", sans-serif ;
+    font-size: 20px;
+    position: relative; left: 800px; top: 150px;
+    z-index: 900;
+}
+

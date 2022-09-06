@@ -1,0 +1,13 @@
+{% include 'employee_app/employee_header.html' %}
+{% load static %}
+<link rel="stylesheet" type="text/css" href="{% static '/employee_app/lista_budow.css' %}">
+{% block content %}
+    <div class="head"><h1>Budowy:</h1></div>
+    <table class="table">
+    {% for b in budowy %}
+        <tr class="trr">
+            <td class="title">{{ b.miasto }} {{ b.ulica }}</td>
+            <td><a class="link" href="{% url 'budowa_details' b.id %}">Pokaz szczegóły</a></td></tr>
+    {% endfor %}
+    </table>
+{% endblock %}

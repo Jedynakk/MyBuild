@@ -1,0 +1,21 @@
+{% load static %}
+<link rel="stylesheet" type="text/css" href="{% static '/employee_app/nav.css' %}">
+<div class="nav_background">
+    <body class="body">
+    <header>
+        <div class="li">
+            <nav>
+                <ul class="nav_links">
+                    <li><a class="aa" href="{% url 'main_employee' %}">STRONA GŁÓWNA</a></li>
+                    <li><a class="a" href="{% url 'budowy' %}">LISTA BUDÓW</a></li>
+                </ul>
+            </nav>
+        </div>
+        {% if user.is_authenticated %}
+            <a href="{% url 'logout' %}">
+                <button>WYLOGUJ</button>
+            </a>
+        {% endif %}
+    </header>
+    </body>
+</div>

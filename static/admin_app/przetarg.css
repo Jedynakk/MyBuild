@@ -1,0 +1,25 @@
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300&display=swap');
+
+
+.ramka{
+    height: 700px;
+    border-radius: 30px;
+    width: 500px;
+    border: none;
+    background-color: #FFE7C6;
+    position: relative;
+    top: 130px;
+    left: 125px;
+    overflow: scroll;
+    box-shadow: 0 0 15px 4px rgba(0, 0, 0, 0.1);
+}
+
+.info{
+    font-family: "Quicksand", sans-serif ;
+    text-align: left;
+    font-weight: 900;
+    font-size: 24px;
+    color: #000000;
+    text-decoration: none;
+    position: relative;right: -50px; top:10px;
+}

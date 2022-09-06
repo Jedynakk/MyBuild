@@ -1,0 +1,134 @@
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300&display=swap');
+
+
+
+
+.updates{
+    height: 700px;
+    width: 700px;
+    border-radius: 30px;
+    background-color: #FFE7C6;
+    position: relative; top:75px; left: 125px;
+    overflow: scroll;
+    box-shadow:0 0 15px 4px rgba(0,0,0,0.1);
+
+}
+
+.tekst{
+    font-family: "Quicksand", sans-serif ;
+    text-align: left;
+    font-weight: 900;
+    font-size: 32px;
+    color: #000000;
+    text-decoration: none;
+    position: relative;right: -130px;
+}
+.autor{
+    font-family: "Quicksand", sans-serif ;
+    text-align: right;
+    font-size: 15px;
+    position: relative;top:-45px; right: 590px;}
+
+
+.data{
+    font-family: "Quicksand", sans-serif ;
+    text-align: right;
+    font-weight: 900;
+    font-size: 10px;
+    color: #000000;
+    text-decoration: none;
+    position: relative; left: -515px; top:-60px
+}
+
+.wydatki{
+    font-family: "Quicksand", sans-serif ;
+    height: 130px;
+    width: 700px;
+    font-weight: 900;
+    font-size: 30px;
+    text-align: center;
+    border: none;
+    border-radius: 30px;
+    background-color: #FFE7C6;
+    position: relative; top:-733px; left: 1000px;
+    overflow: hidden;
+    box-shadow:0 0 15px 4px rgba(0,0,0,0.1);
+}
+
+
+
+.pracownicy{
+    font-family: "Quicksand", sans-serif ;
+    height: 355px;
+    width: 700px;
+    border: none;
+    border-radius: 30px;
+    background-color: #FFE7C6;
+    text-align: center;
+    position: relative; top:-520px; left: 1000px;
+    overflow: scroll;
+    box-shadow:0 0 15px 4px rgba(0,0,0,0.1);
+}
+
+.link{
+    font-family: "Quicksand", sans-serif ;
+    font-weight: 300;
+    font-size: 15px;
+    color: #000000;
+    text-decoration: none;}
+
+
+.dodawnanie{
+    border: none;
+    background:#EACCA2 ;
+    width: 550px;
+    height: 40px;
+    padding: 10px 10px;
+    box-sizing: border-box;
+    border-radius: 50px;
+    position: relative; top:90px; left: 155px;
+    box-shadow:0 0 15px 4px rgba(0,0,0,0.1);
+
+}
+
+.add_button{
+    border: none;
+    height: 40px;
+    width: 90px;
+    padding: 10px;
+    color: black;
+    background-color: #EACCA2;
+    border-radius: 50px;
+    position: relative; top:90px; left:155px ;
+    box-shadow:0 0 15px 4px rgba(0,0,0,0.1);
+
+
+
+}
+
+.ak {
+    font-family: "Quicksand", sans-serif ;
+    font-weight: 300;
+    font-size: 40px;
+    color: #000000;
+    text-decoration: none;
+    position: relative; left: 325px; top: 50px;
+}
+
+.wy{
+    font-family: "Quicksand", sans-serif ;
+    font-weight: 300;
+    font-size: 40px;
+    color: #000000;
+    text-decoration: none;
+    position: relative; left: 1260px; top: -750px;
+}
+
+.pr{
+    font-family: "Quicksand", sans-serif ;
+    font-weight: 300;
+    font-size: 40px;
+    color: #000000;
+    text-decoration: none;
+    position: relative; left: 1245px; top: -540px;
+}

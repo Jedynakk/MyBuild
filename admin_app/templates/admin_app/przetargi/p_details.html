@@ -1,0 +1,19 @@
+{% load static %}
+<link rel="stylesheet" type="text/css" href="{% static '/admin_app/przetarg.css' %}">
+{% block content %}
+<div class="ramka">
+    <div class="info">
+    <h3>Miasto: {{ przetarg.miasto }}</h3>
+    <h3>Ulica: {{ przetarg.ulica }}</h3>
+    <h3>Kod pocztowy: {{ przetarg.kod_pocztowy }}</h3>
+    <h3>Typ budowy: {{ przetarg.typ_budowy }}</h3>
+    <h3>Typ budynku: {{ przetarg.typ_budynku }}</h3>
+    <h3>Zleceniodawca: {{ przetarg.zleceniodawca }}</h3>
+    <h3>Budżet: {{ przetarg.budzet }} ZŁ</h3>
+    <h3>Data: {{ przetarg.data }}</h3>
+        TAGI:{% for tag in przetarg.tags.all %}
+                   <p class="tagi"> {{ tag }}</p>
+        {% endfor %}
+    </div>
+</div>
+{% endblock %}

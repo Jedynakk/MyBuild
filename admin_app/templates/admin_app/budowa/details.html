@@ -1,0 +1,61 @@
+{% load static %}
+<link rel="stylesheet" type="text/css" href="{% static '/admin_app/budowa.css' %}">
+<div class="ramka">
+    <div class="info">
+        <h3>Miasto: {{ budowa.miasto }}</h3>
+        <h3>Ulica: {{ budowa.ulica }}</h3>
+        <h3>Kod pocztowy: {{ budowa.kod_pocztowy }}</h3>
+        <h3>Typ budynku: {{ budowa.typ }}</h3>
+        <h3>Budżet budowli: {{ budowa.budzet }} ZŁ</h3>
+        <h3>Podwykonawca: {{ budowa.podwykonawca }}</h3>
+        <h3>Kierownik budowy: {{ budowa.kierownik }}</h3>
+    </div>
+</div>
+<div class="updates_budowa">
+        {% for update in budowa.budowaupdate_set.all %}
+            <p class="autor">{{ update.user }}<p>
+            <p class="tekst"> {{ update.text }}</p>
+            <p class="data">{{ update.data }}</p>
+        {% endfor %}
+</div>
+<form action="{% url 'add_updates' budowa.id %}" method="post">
+    {% csrf_token %}
+    <input class="add_post" type="text" name="text" placeholder="Napisz post">
+    <input class="add_b" type="submit">
+</form>
+
+<a class="add_wydatki_tekst" href="{% url 'add_wydatki' %}">
+    <button class="add_wydatki">DODAJ WYDATKI</button>
+</a>
+
+<table class="table">
+    <thead>
+    <th class="th">KWOTA</th>
+    <th class="th">KATEGORIA</th>
+    <th class="th">OPIS</th>
+    </thead>
+
+
+    {% for wydatek in budowa.wydatki_set.all %}
+        <tr class="tr">
+            <td>{{ wydatek.kwota }}ZŁ</td>
+            <td>{{ wydatek.get_kategoria_display }}</td>
+            <td>{{ wydatek.opis }}</td>
+        </tr>
+    {% endfor %}
+
+
+    <tr class="suma">
+        <th>SUMA:{{ suma }}ZŁ</th>
+    </tr>
+</table>
+</div>
+
+
+    {% if budowa.image %}
+        <img src="{{ budowa.image.url }}" width=500>
+    {% endif %}
+
+
+
+

@@ -1,0 +1,78 @@
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300&display=swap');
+
+
+.head{
+    font-family: "Quicksand", sans-serif ;
+    font-size: 30px;
+    position: relative; left: 100px;
+}
+
+.table{
+    border-collapse: collapse;
+
+    width: 1900px;
+    font-family: "Quicksand", sans-serif ;
+}
+
+.trr:nth-child(even){background-color: #EACCA2
+}
+
+.trr{
+    font-family: "Quicksand", sans-serif ;
+
+}
+.title{
+    font-family: "Quicksand", sans-serif ;
+    font-size: 40px;
+    position: relative; left: 100px;
+}
+
+.link {
+    text-decoration: none;
+    color: black;
+    font-family: "Quicksand", sans-serif;
+    font-size: 20px;
+    position: relative;
+    top: 0px;
+    left: -100px;
+}
+
+.kiero{
+    font-family: "Quicksand", sans-serif ;
+    font-size: 20px;
+    position: relative; left: 100px;
+}
+
+
+.add_budowa{
+    position: relative; top:-110px; left:1305px ;
+    width: 250px;
+    height: 50px;
+    padding: 9px 25px;
+    background-color:#5E4721 ;
+    border: none;
+    border-radius: 50px;
+    cursor: pointer;
+}
+
+.add_budowa_tekst{
+    font-family: "Quicksand", sans-serif ;
+    font-weight: 300;
+    font-size: 14px;
+    color: #FFE9C4;
+    text-decoration: none;
+    text-align: center;
+
+}
+
+
+.tagi{
+    font-family: "Quicksand", sans-serif ;
+    font-weight: 300;
+    font-size: 10px;
+    color: #000000;
+    text-decoration: none;
+    position: relative; left: -300px; top: -20px;
+    text-align: left
+}
+

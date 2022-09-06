@@ -1,0 +1,17 @@
+{% include 'admin_app/mains/base.html' %}
+{% load static %}
+<link rel="stylesheet" type="text/css" href="{% static '/admin_app/add.css' %}">
+
+<div class="headers"><h1>DODAJ TAG</h1></div>
+
+{% block content %}
+    <div class="rama">
+        <form action="" method="POST" enctype="multipart/form-data">
+            {% csrf_token %}
+            <div class="add_budowa_form">
+                {{ form.as_p }}
+            </div>
+            <button class="button_add_bud"><input class="button_add_bud_tekst"  type="submit" value="DODAJ TAG"></button>
+        </form>
+    </div>
+{% endblock %}

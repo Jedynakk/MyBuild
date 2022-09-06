@@ -1,0 +1,26 @@
+{% load static %}
+<link rel="stylesheet" type="text/css" href="{% static '/admin_app/nav.css' %}">
+<div class="nav_background">
+    <body class="body">
+    <header>
+        <div class="li">
+            <nav>
+                <ul class="nav_links">
+                    <li><a class="aa" href="{% url 'strona_glowna' %}">STRONA GŁÓWNA</a></li>
+                    <li><a class="a" href="{% url 'lista_budowa' %}">LISTA BUDÓW</a></li>
+                    <li><a class="a" href="{% url 'add_budowa' %}">DODAJ BUDOWĘ</a></li>
+                    <li><a class="a" href="{% url 'lista_przetarg' %}">PRZETARGI</a></li>
+                    <li><a class="a" href="{% url 'add_przetarg' %}">DODAJ PRZETARG</a></li>
+                    <li><a class="a" href="{% url 'wydatki' %}">WYDATKI</a></li>
+                    <li><a class="a" href="{% url 'add_wydatki' %}">DODAJ WYDATKI</a></li>
+                </ul>
+            </nav>
+        </div>
+        {% if user.is_authenticated %}
+            <a href="{% url 'logout' %}">
+                <button>WYLOGUJ</button>
+            </a>
+        {% endif %}
+    </header>
+    </body>
+</div>

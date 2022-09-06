@@ -1,0 +1,33 @@
+{% load static %}
+<link rel="stylesheet" type="text/css" href="{% static '/employee_app/budowa.css' %}">
+<div class="ramka">
+    <div class="info">
+    <h3>Miasto: {{ budowa.miasto}}</h3>
+    <h3>Ulica: {{ budowa.ulica }}</h3>
+    <h3>Kod pocztowy: {{ budowa.kod_pocztowy }}</h3>
+    <h3>Typ budynku: {{ budowa.typ }}</h3>
+    <h3>Budżet budowli: {{ budowa.budzet }}</h3>
+    <h3>Podwykonawca: {{ budowa.podwykonawca }}</h3>
+    <h3>Kierownik budowy: {{ budowa.kierownik }}</h3>
+    </div>
+</div>
+<div class="updates_budowa">
+
+        {% for update in budowa.budowaupdate_set.all %}
+            <p class="autor">{{ update.user }}<p>
+            <p class="tekst"> {{ update.text }}</p>
+            <p class="data">{{ update.data }}</p>
+        {% endfor %}
+</div>
+    <ul>
+
+    <form action="{% url 'add_updates_em' budowa.id %}" method="post">
+    {% csrf_token %}
+    <input class="add_post" type="text" name="text" placeholder="Napisz post">
+    <input class="add_b" type="submit">
+</form>
+
+
+    {% if budowa.image %}
+        <img src="{{ budowa.image.url }}">
+    {% endif %}

@@ -1,0 +1,6 @@
+{% include 'admin_app/mains/base.html' %}
+{% load static %}
+<link rel="stylesheet" type="text/css" href="{% static '/admin_app/add.css' %}">
+{% block content %}
+    {% include 'form.html' %}
+{% endblock %}

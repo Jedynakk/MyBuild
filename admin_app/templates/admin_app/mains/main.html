@@ -1,0 +1,40 @@
+{% include 'admin_app/mains/base.html' %}
+{% load static %}
+<body>
+<link rel="stylesheet" type="text/css" href="{% static '/admin_app/strona_glowna.css' %}">
+<div class="ak">AKUTALNOŚCI</div>
+<div class="updates">
+    {% for u in update %}
+        <div class="tekst"><p>{{ u.text }}</p></div>
+        <div class="autor"><p>{{ u.user }}</p></div>
+        <div class="data">{{ u.data }}</div>
+    {% endfor %}
+</div>
+
+
+{{ message }}
+
+
+<form action="{% url 'main_update' %}" method="post">
+    {% csrf_token %}
+    <input class="dodawnanie" type="text" name="text" placeholder="Napisz post">
+    <input class="add_button" type="submit" value="DODAJ"></form>
+
+<div class="wy">WYDATKI</div>
+
+<div class="wydatki"><p>WYDATKI ZE WSZYSTKICH BUDÓW:<br>
+    {{ suma }} PLN</p></div>
+
+<div class="pr">KIEROWNICY</div>
+<div class="pracownicy">
+    {% for e in employees %}
+        <tr>
+            <h2>
+                <td>{{ e.email }}</td>
+                <td>{{ e.username }}</td>
+            </h2>
+            <small><a class="link" href="{% url 'user_info' e.id %}">zobacz szczegóły</a></small></h2></p>
+        </tr>
+    {% endfor %}
+</div>
+</body>

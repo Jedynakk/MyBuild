@@ -1,0 +1,20 @@
+{% include 'admin_app/mains/base.html' %}
+{% load static %}
+<link rel="stylesheet" type="text/css" href="{% static '/admin_app/user_info.css' %}">
+<div class="ramka">
+    {% block content %}
+        <div class='info'>
+            <h3>IMIE:{{ kiero.last_name }}</h3>
+            <h3>NAZWISKO:{{ kiero.last_name }}</h3>
+            <h3>NICK:{{ kiero.username }}</h3>
+            <h3>DATA DOŁĄCZENIA:{{ kiero.date_joined }}</h3>
+            <p>CZY UZYTKOWIK JEST ADMINISTRATOREM?</p>
+            <form action="{% url 'user_info' kiero.id %}" method="POST">
+                {% csrf_token %}
+
+                <input type="submit" name="zmien" value="{{ user.id }}"><button class="button">TAK, ZMIEN DOSTEPY </button></input>
+
+            </form>
+        </div>
+    {% endblock %}
+</div>

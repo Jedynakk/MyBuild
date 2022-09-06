@@ -1,0 +1,38 @@
+{% include 'admin_app/mains/base.html' %}
+{% load static %}
+    <link rel="stylesheet" type="text/css" href="{% static '/admin_app/wydatki.css' %}">
+{% block content %}
+
+    <h1 class="title">WYDATKI:</h1>
+<div class="select">
+    <form method="GET">
+        <select name="kategoria">
+            <option value="0">KATEGORIA</option>
+            {% for k in kategoria %}
+                <option class="opcja" value="{{ k.0 }}">{{ k.1 }}</option>
+            {% endfor %}
+        </select>
+        <input class="filtr" type="submit" value="FILTRUJ">
+    </form>
+</div>
+
+    <table class="table">
+        <thead>
+            <th class="th">KWOTA</th>
+            <th class="th">BUDOWA</th>
+            <th class="th">KATEGORIA</th>
+            <th class="th">OPIS</th>
+        </thead>
+        {% for w in wydatki %}
+            <tr class="tr">
+                <td>{{ w.kwota }} ZŁ</td>
+                <td>{{ w.budowa.ulica }}</td>
+                <td>{{ w.get_kategoria_display }}</td>
+                <td>{{ w.opis }}</td>
+            </tr>
+        {% endfor %}
+        <tr class="suma">
+            <th>SUMA: {{ suma }}ZŁ</th>
+        </tr>
+    </table>
+{% endblock %}

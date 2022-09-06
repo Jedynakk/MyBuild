@@ -1,0 +1,14 @@
+{% include 'admin_app/mains/admin_header.html' %}
+{% load static %}
+<link rel="stylesheet" type="text/css" href="{% static '/admin_app/del_przetarg.css' %}">
+
+
+{% block zawartosc %}
+    <p class="text">Czy jestes pewien ze checsz skasować przetarg
+        {{ przetarg.miasto }} {{ przetarg.ulica }}</p>
+
+    <form method="post">`
+    {% csrf_token %}
+    <button class="skasuj"><input class="skasuj_text" type="submit" value="tak" name="potwierdzenie"></button>
+    </form>
+{% endblock %}

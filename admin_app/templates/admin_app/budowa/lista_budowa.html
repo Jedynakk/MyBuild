@@ -1,0 +1,18 @@
+{% include 'admin_app/mains/admin_header.html' %}
+{% load static %}
+<link rel="stylesheet" type="text/css" href="{% static '/admin_app/lista_budow.css' %}">
+<div class="head"><h1>Lista Budów</h1></div>
+
+
+    <a class="add_budowa_tekst" href={% url 'add_budowa' %}><button class="add_budowa">DODAJ BUDOWE</button></a>
+
+
+<table class="table">
+{% for budowa in lista_budowa_list %}
+    <tr class="trr">
+        <td class="title">{{ budowa.miasto }} {{ budowa.ulica }}</td>
+        <td><a class="link" href="{% url 'main_budowa' budowa.id %}">ZOBACZ SZCZEGÓŁY</a></td>
+        <td class="kiero">{{ budowa.kierownik }}</td>
+    </tr>
+{% endfor %}
+</table>

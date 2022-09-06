@@ -1,0 +1,39 @@
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300&display=swap');
+
+
+.head{
+    font-family: "Quicksand", sans-serif ;
+    font-size: 30px;
+    position: relative; left: 100px;
+}
+
+.table{
+    border-collapse: collapse;
+
+    width: 1900px;
+    font-family: "Quicksand", sans-serif ;
+}
+
+.trr:nth-child(even){background-color: #EACCA2
+}
+
+.trr{
+    font-family: "Quicksand", sans-serif ;
+
+}
+.title{
+    font-family: "Quicksand", sans-serif ;
+    font-size: 40px;
+    position: relative; left: 100px;
+}
+
+.link {
+    text-decoration: none;
+    color: black;
+    font-family: "Quicksand", sans-serif;
+    font-size: 20px;
+    position: relative;
+    top: 0px;
+    left: 100px;
+}
+

@@ -1,0 +1,24 @@
+{% load static %}
+<link rel="stylesheet" type="text/css" href="{% static '/account/login.css' %}">
+<body class="body">
+<div class="headers"><h1>LOGIN</h1></div>
+
+{% block content %}
+        <div class="rama">
+            <div class="log">
+                <form action="" method="POST" enctype="multipart/form-data">
+                    {% csrf_token %}
+                    <div class="add_budowa_form">
+                        {{ form.as_p }}
+                    </div>
+                    <button class="button_add_bud"><input class="button_add_bud_tekst" type="submit"
+                                                          value="ZALOGUJ">
+                    </button>
+                    <div class="kreska">
+                    </div>
+                    <p class="b">Jeśli nie masz konta kliknij <a href="{% url 'add_user' %}">tutaj</a></p>
+                </form>
+            </div>
+        </div>
+{% endblock %}
+</body>
